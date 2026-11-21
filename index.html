@@ -6,21 +6,16 @@
     <title>BELNASA Youth Forum | Empowering Next-Gen Leaders</title>
     <meta name="description" content="The BELNASA Youth Forum mainstreams and empowers diverse youth voices across Botswana, Eswatini, Lesotho, Namibia, and South Africa.">
     <link rel="icon" type="image/png" href="BELNASA%20Favicon.png">
-<link rel="apple-touch-icon" href="BELNASA%20Favicon.png">
-    
+    <link rel="apple-touch-icon" href="BELNASA%20Favicon.png">
+
     <!-- Google Fonts: Inter & Outfit -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
-    
+
     <!-- Open Sauce Sans Font (CDN + Local TTF Support for IVY Summit Heading) -->
     <link href="https://fonts.cdnfonts.com/css/open-sauce-one" rel="stylesheet">
     <style>
-        /* =====================================================================
-           ROOKIE GUIDE: OPEN SAUCE SANS FONT SETUP
-           If you upload the 'OpenSauceSans-Regular.ttf' file into your GitHub 
-           repository folder, this @font-face rule will load it directly!
-        ===================================================================== */
         @font-face {
             font-family: 'Open Sauce Sans';
             src: url('OpenSauceSans-Regular.ttf') format('truetype'),
@@ -47,33 +42,30 @@
                         opensauce: ['"Open Sauce Sans"', '"Open Sauce One"', 'Outfit', 'sans-serif'],
                     },
                     colors: {
-                        /* OFFICIAL BELNASA BRAND COLOURS (From Colour Codes Sheet) */
                         belnasa: {
-                            blue: '#0c7de6',   /* Official BELNASA Blue */
-                            green: '#23ac8d',  /* Official BELNASA Green/Teal */
+                            blue: '#0c7de6',
+                            green: '#23ac8d',
                             dark: '#0f172a',
                             light: '#f8fafc'
                         },
-                        /* IVY SUMMIT COLOURS (Preserved 100% from IVY Summit File) */
-                        navy: '#162238',         // Concept Note Cover Deep Slate/Navy
-                        deepNavy: '#0B0E4C',     // Institutional Authority Navy
-                        teal: '#29AB87',         // BELNASA & IVY Node Teal
-                        brandGreen: '#78BE20',   // Imagine Scholar Acacia Green
-                        electricBlue: '#1D4ED8', // Concept Note "Ideators to Creators" Blue
-                        brightBlue: '#2563EB',   // Highlight Blue
-                        belnasaBlue: '#0072CE',  // BELNASA Logo Blue
-                        accent: '#FF5A00',       // High-contrast disruptive action signifier
+                        navy: '#162238',
+                        deepNavy: '#0B0E4C',
+                        teal: '#29AB87',
+                        brandGreen: '#78BE20',
+                        electricBlue: '#1D4ED8',
+                        brightBlue: '#2563EB',
+                        belnasaBlue: '#0072CE',
+                        accent: '#FF5A00',
                         surface: '#F4F6F9'
                     }
                 }
             }
         }
     </script>
-    
+
     <style>
         body { font-family: 'Inter', sans-serif; }
-        
-        /* Main BELNASA Gradient Text (#0c7de6 to #23ac8d) */
+
         .gradient-text {
             background: linear-gradient(to right, #0c7de6, #23ac8d);
             -webkit-background-clip: text;
@@ -86,33 +78,25 @@
             opacity: 0.18;
         }
 
-        /* =====================================================================
-           IVY SUMMIT EXACT STYLES (DO NOT MODIFY)
-        ===================================================================== */
-        #ivy-summit-portal h1, #ivy-summit-portal h2, #ivy-summit-portal h3, 
-        #ivy-summit-portal h4, #ivy-summit-portal h5, #ivy-summit-portal h6, 
+        #ivy-summit-portal h1, #ivy-summit-portal h2, #ivy-summit-portal h3,
+        #ivy-summit-portal h4, #ivy-summit-portal h5, #ivy-summit-portal h6,
         #ivy-summit-portal .font-display { font-family: 'Outfit', sans-serif; }
-        
-        /* Cover Slide Title Gradient: Teal to Imagine Scholar Green */
+
         .title-gradient {
             background: linear-gradient(90deg, #10B981 0%, #29AB87 45%, #8CC63F 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
-        /* Statistical Grid Dividers */
         .stat-border { border-right: 1px solid rgba(255,255,255,0.15); }
         @media (max-width: 768px) { .stat-border { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.15); } }
-        
-        /* Card & Matrix Interactions */
+
         .routing-card { transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1); }
         .routing-card:hover { transform: translateY(-6px); box-shadow: 0 20px 30px -10px rgba(11, 14, 76, 0.15); }
 
-        /* View Switching Animation for IVY Summit Sub-Views */
         .view-section { display: none; animation: fadeIn 0.35s ease-out forwards; }
         .view-section.active { display: block; }
-        
-        /* Top-Level Portal Switching (BELNASA Main Site vs IVY Summit Portal) */
+
         .portal-wrapper { display: none; }
         .portal-wrapper.active { display: flex; flex-direction: column; min-height: 100vh; }
 
@@ -121,27 +105,14 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* Active Nav Tab Indicator */
         .nav-btn.active { color: #29AB87; font-weight: 700; border-bottom: 2px solid #29AB87; }
-        
-        /* Custom Scrollbar */
+
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: #162238; }
         ::-webkit-scrollbar-thumb { background: #23ac8d; border-radius: 4px; }
     </style>
 </head>
 <body class="font-sans text-gray-800 antialiased bg-white selection:bg-belnasa-green selection:text-white">
-
-    <!-- =====================================================================
-         ROOKIE GUIDE: HOW THIS SINGLE-FILE WEBSITE WORKS
-         This file contains TWO complete experiences in one index.html file:
-1. #belnasa-main-portal -> The main BELNASA Youth Forum Website
-2. #ivy-summit-portal   -> The exact IVY Summit 2026 Website & Registration
-         
-         Visitors can switch between them seamlessly without loading a new page!
-         To link directly to the IVY Summit in your bulk emails, simply use:
-         https://belnasayouth.org/#ivy-summit
-    ====================================================================== -->
 
     <!-- =====================================================================
          PORTAL 1: BELNASA YOUTH FORUM MAIN WEBSITE
@@ -152,14 +123,14 @@
         <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 transition-all duration-300 shadow-sm">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex justify-between h-20 items-center">
-                    
+
                     <!-- OFFICIAL BELNASA LOGO -->
                     <div class="flex-shrink-0 flex items-center">
-                       <a href="#home" class="flex items-center h-20 -ml-3 group">
-                          <img src="BELNASA%20logo.png" alt="BELNASA Youth Forum" class="h-20 w-auto object-contain scale-[2.1] origin-left transition-transform duration-300 group-hover:scale-[2.15] pointer-events-none">
-                       </a>
+                        <a href="#home" class="flex items-center h-20 -ml-3 group">
+                            <img src="BELNASA%20logo.png" alt="BELNASA Youth Forum" class="h-20 w-auto object-contain scale-[2.1] origin-left transition-transform duration-300 group-hover:scale-[2.15] pointer-events-none">
+                        </a>
                     </div>
-                    
+
                     <!-- Desktop Menu -->
                     <div class="hidden md:flex md:items-center md:space-x-7">
                         <a href="#home" class="text-gray-600 hover:text-belnasa-blue px-2 py-2 text-sm font-medium transition-colors">Home</a>
@@ -169,7 +140,6 @@
                             <span>Register for the IVY Summit '26</span>
                             <span class="bg-belnasa-green/10 text-belnasa-green text-[10px] px-1.5 py-0.5 rounded font-extrabold uppercase">Live</span>
                         </button>
-                        <!-- MOST PROMINENT CTA: REGISTER AS A MEMBER -->
                         <a href="#membership" class="bg-belnasa-blue hover:bg-[#0966bd] text-white px-6 py-3 rounded-full text-sm font-bold transition-all shadow-md shadow-belnasa-blue/25 hover:shadow-lg transform hover:-translate-y-0.5">
                             Register as a Member
                         </a>
@@ -202,56 +172,48 @@
             </div>
         </nav>
 
-        <!-- =================================================================
-             HERO SECTION (With subtle BELNASA Gallery Background Overlay)
-             ROOKIE GUIDE: To change the background image, replace 'IMG_1027.JPG'
-             in the style="background-image: url('...')" below with any photo filename!
-        ================================================================== -->
+        <!-- HERO SECTION -->
         <section id="home" class="relative pt-32 pb-20 lg:pt-44 lg:pb-32 overflow-hidden bg-belnasa-light min-h-[92vh] flex items-center">
-            
-            <!-- Subtle Background Image from BELNASA Past Activities -->
-            <div class="absolute inset-0 z-0 opacity-15 bg-cover bg-center" 
+
+            <div class="absolute inset-0 z-0 opacity-15 bg-cover bg-center"
                  style="background-image: url('IMG_1027.JPG'), url('https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1920&q=80');">
             </div>
             <div class="absolute inset-0 z-0 bg-gradient-to-b from-white/95 via-white/85 to-belnasa-light"></div>
 
-            <!-- Decorative Brand Blobs -->
             <div class="hero-blob bg-belnasa-blue w-96 h-96 rounded-full top-10 left-[-8%]"></div>
             <div class="hero-blob bg-belnasa-green w-96 h-96 rounded-full bottom-10 right-[-8%]"></div>
-            
+
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div class="text-center max-w-4xl mx-auto">
                     <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-belnasa-green/10 border border-belnasa-green/20 text-belnasa-green font-semibold text-xs uppercase tracking-widest mb-6">
                         <span>Botswana • Eswatini • Lesotho • Namibia • South Africa</span>
                     </div>
-                    
+
                     <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold text-gray-900 tracking-tight mb-8 leading-[1.1]">
                         Empowering the Next Generation of <span class="gradient-text">Leaders Across Borders.</span>
                     </h1>
-                    
+
                     <p class="mt-4 text-xl md:text-2xl text-gray-600 mb-10 leading-relaxed font-normal max-w-3xl mx-auto">
                         We mainstream youth voices in regional development decision-making and drive critical dialogue, policy innovation, and economic opportunity across Southern Africa.
                     </p>
-                    
-                    <!-- PRIMARY CALLS TO ACTION (Register as Member is #1 Most Prominent) -->
+
                     <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
                         <a href="#membership" class="w-full sm:w-auto px-10 py-4 text-base font-bold rounded-full text-white bg-belnasa-blue hover:bg-[#0966bd] shadow-xl shadow-belnasa-blue/30 hover:shadow-2xl transition-all transform hover:-translate-y-1 flex items-center justify-center gap-2">
                             <span>Register as a BELNASA Member</span>
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
                         </a>
-                        <button onclick="openIvyPortal('onboarding')" class="w-full sm:w-auto px-8 py-4 text-base font-bold rounded-full text-belnasa-green bg-white border-2 border-belnasa-green hover:bg-belnasa-green hover:text-white transition-all shadow-sm">
+                        <button onclick="openTeamsRegistration()" class="w-full sm:w-auto px-8 py-4 text-base font-bold rounded-full text-belnasa-green bg-white border-2 border-belnasa-green hover:bg-belnasa-green hover:text-white transition-all shadow-sm">
                             Register for IVY Summit 2026
                         </button>
                     </div>
 
-                    <!-- Quick Regional Highlight Pills -->
                     <div class="mt-14 pt-8 border-t border-gray-200/70 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
                         <div>
                             <p class="text-2xl font-extrabold text-belnasa-blue">5 Nations</p>
                             <p class="text-xs text-gray-500 uppercase tracking-wider font-medium mt-1">Regional Footprint</p>
                         </div>
                         <div>
-                            <p class="text-2xl font-extrabold text-belnasa-green">18–35 Years</p>
+                            <p class="text-2xl font-extrabold text-belnasa-green">18-35 Years</p>
                             <p class="text-xs text-gray-500 uppercase tracking-wider font-medium mt-1">Youth Demographic</p>
                         </div>
                         <div>
@@ -267,30 +229,25 @@
             </div>
         </section>
 
-        <!-- =================================================================
-             ABOUT US & GALLERY BACKGROUND SECTION
-             ROOKIE GUIDE: We use your historical BELNASA photos ('IMG-20231208-WA0028.jpg',
-             'IMG-20231208-WA0114.jpg', 'IMG_20231206_150037.jpg') as atmospheric 
-             layered backgrounds so the focus stays on the Forum's mission!
-        ================================================================== -->
+        <!-- ABOUT US & GALLERY BACKGROUND SECTION -->
         <section id="about" class="py-24 bg-white relative overflow-hidden">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-14 items-center">
-                    
+
                     <div class="lg:col-span-6">
                         <span class="text-belnasa-blue font-bold uppercase tracking-widest text-xs block mb-2">Our Purpose & Vision</span>
                         <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-6 leading-tight">
                             Positioning Youth as Co-Creators of Our Economic Future.
                         </h2>
                         <div class="w-20 h-1.5 bg-belnasa-green mb-8 rounded-full"></div>
-                        
+
                         <p class="text-lg text-gray-600 mb-6 leading-relaxed">
                             The <strong>BELNASA Youth Forum</strong> is a regional collective of ambitious young leaders across Botswana, Eswatini, Lesotho, Namibia, and South Africa. Our purpose is to mainstream youth voices in development decision-making processes and drive critical dialogue, youth action, and socioeconomic initiative across the subregion.
                         </p>
                         <p class="text-lg text-gray-600 mb-8 leading-relaxed">
-                            Originating as a strategic liaison connecting young leaders on the ground with international development stakeholders—including the World Bank Group—BELNASA is building a sustainable, professionalized regional institution that mobilizes capital, skills, policy research, and peer-to-peer knowledge transfer.
+                            Originating as a strategic liaison connecting young leaders on the ground with international development stakeholders, including the World Bank Group, BELNASA is building a sustainable, professionalized regional institution that mobilizes capital, skills, policy research, and peer-to-peer knowledge transfer.
                         </p>
-                        
+
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
                             <div class="p-4 rounded-xl bg-belnasa-light border-l-4 border-belnasa-blue">
                                 <h4 class="font-bold text-gray-900 text-sm mb-1">Our Vision</h4>
@@ -306,11 +263,9 @@
                             </div>
                         </div>
                     </div>
-                    
-                    <!-- Atmospheric Collage of Past BELNASA Milestones (Used as Background Cards) -->
+
                     <div class="lg:col-span-6 relative">
                         <div class="grid grid-cols-2 gap-4 relative z-10">
-                            <!-- Card 1: Regional Dialogue Background -->
                             <div class="relative h-64 rounded-2xl overflow-hidden shadow-lg group col-span-2">
                                 <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
                                      style="background-image: url('IMG-20231208-WA0028.jpg'), url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=900&q=80');"></div>
@@ -321,7 +276,6 @@
                                 </div>
                             </div>
 
-                            <!-- Card 2: Leadership & Policy -->
                             <div class="relative h-52 rounded-2xl overflow-hidden shadow-lg group">
                                 <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
                                      style="background-image: url('IMG-20231208-WA0114.jpg'), url('https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=600&q=80');"></div>
@@ -332,7 +286,6 @@
                                 </div>
                             </div>
 
-                            <!-- Card 3: Science & Innovation Forum -->
                             <div class="relative h-52 rounded-2xl overflow-hidden shadow-lg group">
                                 <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
                                      style="background-image: url('IMG_20231206_150037.jpg'), url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=600&q=80');"></div>
@@ -344,7 +297,6 @@
                             </div>
                         </div>
 
-                        <!-- Decorative Glows -->
                         <div class="absolute -bottom-6 -left-6 w-32 h-32 bg-belnasa-green rounded-full opacity-30 blur-2xl"></div>
                         <div class="absolute -top-6 -right-6 w-36 h-36 bg-belnasa-blue rounded-full opacity-30 blur-2xl"></div>
                     </div>
@@ -353,9 +305,7 @@
             </div>
         </section>
 
-        <!-- =================================================================
-             THE 5 FUNCTIONAL MANDATES SECTION
-        ================================================================== -->
+        <!-- THE 5 FUNCTIONAL MANDATES SECTION -->
         <section id="mandates" class="py-20 bg-belnasa-light border-y border-gray-100">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center max-w-3xl mx-auto mb-14">
@@ -396,19 +346,14 @@
             </div>
         </section>
 
-        <!-- =================================================================
-             MOST PROMINENT SECTION: BECOME A REGISTERED BELNASA MEMBER
-             Collects Full Name, Email, Country (BLNS), and Age (for BELNASA ID)
-        ================================================================== -->
+        <!-- BECOME A REGISTERED BELNASA MEMBER -->
         <section id="membership" class="py-24 bg-gradient-to-br from-belnasa-blue via-[#0a65ba] to-belnasa-green text-white relative overflow-hidden">
-            <!-- Subtle Background Image Overlay -->
             <div class="absolute inset-0 opacity-10 bg-cover bg-center mix-blend-overlay"
                  style="background-image: url('IMG_1027.JPG');"></div>
 
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                    
-                    <!-- Left Column: Membership Value Proposition -->
+
                     <div class="lg:col-span-6">
                         <span class="inline-block px-3.5 py-1 rounded-full bg-white/15 backdrop-blur-sm text-white font-bold text-xs uppercase tracking-widest mb-4">
                             Official BELNASA Membership Portal
@@ -436,10 +381,9 @@
                         </div>
                     </div>
 
-                    <!-- Right Column: Interactive Member Registration & Instant Member ID Card -->
                     <div class="lg:col-span-6">
                         <div class="bg-white text-gray-900 rounded-3xl shadow-2xl p-8 sm:p-10 border border-white/20">
-                            
+
                             <div id="member-form-container">
                                 <div class="flex items-center justify-between mb-6">
                                     <div>
@@ -502,7 +446,6 @@
                                 </form>
                             </div>
 
-                            <!-- Instant Digital Member Profile Card (Revealed on Submit) -->
                             <div id="member-profile-card" class="hidden">
                                 <div class="text-center mb-4">
                                     <span class="inline-block bg-belnasa-green/15 text-belnasa-green text-xs font-extrabold px-3 py-1 rounded-full uppercase tracking-wider">
@@ -540,7 +483,7 @@
                                 </div>
 
                                 <div class="flex flex-col sm:flex-row gap-3">
-                                    <button onclick="openIvyPortal('onboarding')" class="flex-1 bg-belnasa-green hover:bg-teal-600 text-white font-bold py-3 px-4 rounded-xl text-xs text-center transition-all">
+                                    <button onclick="openTeamsRegistration()" class="flex-1 bg-belnasa-green hover:bg-teal-600 text-white font-bold py-3 px-4 rounded-xl text-xs text-center transition-all">
                                         Now Register for IVY Summit '26 &rarr;
                                     </button>
                                     <button onclick="resetMemberForm()" class="py-3 px-4 rounded-xl border border-gray-200 text-gray-600 hover:bg-gray-50 text-xs font-semibold">
@@ -556,14 +499,11 @@
             </div>
         </section>
 
-        <!-- =================================================================
-             FEATURED EVENT PREVIEW CARD (LAUNCHES FULL IVY SUMMIT PORTAL)
-        ================================================================== -->
+        <!-- FEATURED EVENT PREVIEW CARD -->
         <section id="summit-preview" class="py-24 bg-slate-900 text-white relative overflow-hidden">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div class="text-center mb-12">
                     <span class="text-belnasa-green font-bold tracking-widest uppercase text-xs mb-2 block">Upcoming Flagship Event • 28 Nov 2026</span>
-                    <!-- Uses Open Sauce Sans Font as requested -->
                     <h2 class="font-opensauce text-4xl md:text-5xl font-extrabold mb-4">Imagine Ventures Youth Summit (IVY Summit)</h2>
                     <p class="text-xl text-blue-200 font-light max-w-2xl mx-auto">Theme: <span class="font-semibold text-white">Ideators to Creators</span></p>
                 </div>
@@ -578,13 +518,13 @@
                         </div>
                         <div class="text-center bg-white/5 rounded-2xl p-6 border border-white/10">
                             <p class="font-extrabold text-xl text-belnasa-green">28 Nov 2026</p>
-                            <p class="text-sm text-gray-300 mt-1">09:00 AM – 1:30 PM</p>
+                            <p class="text-sm text-gray-300 mt-1">09:00 AM - 1:30 PM</p>
                             <p class="text-xs text-gray-400 mt-2">Virtual • Free Access &amp; Post-Summit Recordings</p>
                         </div>
                     </div>
 
                     <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                        <button onclick="openIvyPortal('onboarding')" class="bg-belnasa-green hover:bg-teal-500 text-white font-bold py-4 px-9 rounded-full shadow-lg transition-all transform hover:-translate-y-0.5 text-sm">
+                        <button onclick="openTeamsRegistration()" class="bg-belnasa-green hover:bg-teal-500 text-white font-bold py-4 px-9 rounded-full shadow-lg transition-all transform hover:-translate-y-0.5 text-sm">
                             Register for IVY Summit 2026 &rarr;
                         </button>
                         <button onclick="openIvyPortal('overview')" class="bg-white/10 hover:bg-white/20 text-white border border-white/20 font-semibold py-4 px-9 rounded-full transition-all text-sm">
@@ -595,12 +535,11 @@
             </div>
         </section>
 
-        <!-- MAIN BELNASA FOOTER (With AWS SES Compliance & Non-Prominent Partner Note) -->
+        <!-- MAIN BELNASA FOOTER -->
         <footer class="bg-gray-950 text-gray-400 pt-16 pb-10 mt-auto">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="grid grid-cols-1 md:grid-cols-12 gap-10 mb-12">
-                    
-                    <!-- Brand & Contact -->
+
                     <div class="md:col-span-5">
                         <div class="h-20 flex items-center mb-4 -ml-3">
                             <img src="BELNASA%20logo.png" alt="BELNASA Youth Forum" class="h-20 w-auto object-contain scale-[2.1] origin-left pointer-events-none">
@@ -613,7 +552,6 @@
                         </a>
                     </div>
 
-                    <!-- Navigation Links -->
                     <div class="md:col-span-3">
                         <h4 class="text-white font-semibold mb-4 uppercase tracking-wider text-xs">Navigation</h4>
                         <ul class="space-y-2.5 text-sm">
@@ -625,7 +563,6 @@
                         </ul>
                     </div>
 
-                    <!-- Non-Prominent Strategic Affiliation Note -->
                     <div class="md:col-span-4">
                         <h4 class="text-white font-semibold mb-4 uppercase tracking-wider text-xs">Regional Footprint</h4>
                         <p class="text-xs text-gray-400 leading-relaxed mb-3">
@@ -659,17 +596,14 @@
 
 
     <!-- =====================================================================
-         PORTAL 2: EXACT IMAGINE VENTURES YOUTH SUMMIT (IVY SUMMIT) PORTAL
-         Preserved 100% from your attached file, with the Summit Name/Title
-         updated to the 'Open Sauce Sans' font as requested!
+         PORTAL 2: IMAGINE VENTURES YOUTH SUMMIT (IVY SUMMIT) PORTAL
     ====================================================================== -->
     <div id="ivy-summit-portal" class="portal-wrapper bg-surface text-gray-900">
 
-        <!-- STICKY NAVIGATION BAR (Exact IVY Summit Navbar + Back to BELNASA Link) -->
+        <!-- STICKY NAVIGATION BAR -->
         <nav class="fixed w-full bg-white/95 backdrop-blur-md z-50 border-b border-gray-200 transition-all duration-300 shadow-sm" id="navbar">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex justify-between items-center">
-                
-                <!-- Brand Identity -->
+
                 <div class="flex items-center gap-3">
                     <button onclick="closeIvyPortal()" title="Back to BELNASA Main Website" class="text-xs font-semibold text-gray-500 hover:text-belnasa-blue border border-gray-200 hover:border-belnasa-blue px-2.5 py-1.5 rounded-lg transition-colors flex items-center gap-1">
                         <span>&larr; BELNASA Home</span>
@@ -692,7 +626,6 @@
                         </svg>
                         <div>
                             <div class="flex items-center gap-2">
-                                <!-- OPEN SAUCE SANS APPLIED TO SUMMIT NAME -->
                                 <span class="font-opensauce font-extrabold text-navy tracking-tight text-base sm:text-lg leading-none">Imagine Ventures Youth Summit</span>
                                 <span class="hidden sm:inline-block text-[10px] font-bold bg-navy text-teal px-1.5 py-0.5 rounded uppercase tracking-wider font-opensauce">IVY Summit '26</span>
                             </div>
@@ -700,8 +633,7 @@
                         </div>
                     </button>
                 </div>
-                
-                <!-- Primary Navigation -->
+
                 <div class="hidden md:flex gap-8 items-center text-sm font-medium">
                     <button onclick="switchView('overview')" id="nav-overview" class="nav-btn active py-2 text-gray-700 hover:text-teal transition-colors">
                         Overview
@@ -714,9 +646,9 @@
                     </button>
                 </div>
 
-                <!-- Onboarding CTA -->
+                <!-- Direct Microsoft Teams Redirect CTA -->
                 <div class="flex items-center gap-3">
-                    <button onclick="switchView('onboarding')" id="nav-onboarding" class="bg-deepNavy hover:bg-electricBlue text-white px-5 py-2.5 rounded font-semibold text-sm transition-all shadow-sm flex items-center gap-2">
+                    <button onclick="openTeamsRegistration()" id="nav-onboarding" class="bg-deepNavy hover:bg-electricBlue text-white px-5 py-2.5 rounded font-semibold text-sm transition-all shadow-sm flex items-center gap-2">
                         <span>Register</span>
                         <span aria-hidden="true" class="text-teal font-bold">&rarr;</span>
                     </button>
@@ -728,20 +660,17 @@
                 <button onclick="switchView('overview')" id="mob-overview" class="py-1.5 px-3 rounded text-teal bg-white shadow-sm">Overview</button>
                 <button onclick="switchView('programme')" id="mob-programme" class="py-1.5 px-3 rounded text-gray-600">Programme</button>
                 <button onclick="switchView('speakers')" id="mob-speakers" class="py-1.5 px-3 rounded text-gray-600">Speakers</button>
-                <button onclick="switchView('onboarding')" id="mob-onboarding" class="py-1.5 px-3 rounded text-gray-600">Register</button>
+                <button onclick="openTeamsRegistration()" id="mob-onboarding" class="py-1.5 px-3 rounded text-deepNavy font-bold">Register</button>
             </div>
         </nav>
 
-        <!-- =====================================================================
-             VIEW 1: OVERVIEW (CONCISE PPTX CONCEPT NOTE ALIGNMENT)
-        ====================================================================== -->
+        <!-- VIEW 1: OVERVIEW -->
         <main id="view-overview" class="view-section active flex-grow pt-16">
-            
-            <!-- HERO COMPONENT: Mirrors Cover Slide -->
+
             <header class="relative bg-navy min-h-[78vh] flex items-stretch overflow-hidden">
-                
+
                 <div class="w-full lg:w-[72%] bg-[#182338]/95 relative z-10 py-12 px-6 sm:px-12 lg:px-20 flex flex-col justify-between border-r border-white/10">
-                    
+
                     <!-- Partner Logos -->
                     <div class="flex flex-wrap items-center gap-4 mb-10">
                         <div class="bg-white h-14 w-44 rounded-xl shadow-md flex items-center justify-center overflow-hidden">
@@ -755,8 +684,7 @@
 
                     <!-- Center Hero Title & Theme -->
                     <div class="relative my-auto py-4 pl-6 sm:pl-10 border-l-4 border-teal">
-                        
-                        <!-- Subtle IVY Watermark -->
+
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 200" class="absolute -left-2 top-0 h-44 sm:h-56 w-auto opacity-15 pointer-events-none select-none z-0">
                             <g stroke="#3B82F6" stroke-width="24" stroke-linecap="round" stroke-linejoin="round">
                                 <line x1="70" y1="40" x2="70" y2="160" />
@@ -774,7 +702,6 @@
                         </svg>
 
                         <div class="relative z-10">
-                            <!-- OPEN SAUCE SANS FONT APPLIED TO MAIN SUMMIT HEADING -->
                             <h1 class="font-opensauce text-4xl sm:text-6xl font-extrabold tracking-tight leading-[1.08] title-gradient mb-6">
                                 Imagine Ventures<br>Youth Summit
                             </h1>
@@ -789,12 +716,12 @@
                             </h2>
 
                             <p class="text-white font-display font-bold tracking-wider text-sm sm:text-base mb-8">
-                                28 NOV 2026 &nbsp;•&nbsp; 9AM–1:30PM &nbsp;•&nbsp; <span class="text-teal">VIRTUAL</span>
+                                28 NOV 2026 &nbsp;•&nbsp; 9AM-1:30PM &nbsp;•&nbsp; <span class="text-teal">VIRTUAL</span>
                             </p>
 
                             <div class="flex flex-wrap gap-4">
-                                <button onclick="switchView('onboarding')" class="bg-teal hover:bg-[#208b6d] text-white font-display font-bold px-7 py-3.5 rounded shadow-lg transition-all text-sm">
-                                    Register for the IVY Summit 2026&rarr;
+                                <button onclick="openTeamsRegistration()" class="bg-teal hover:bg-[#208b6d] text-white font-display font-bold px-7 py-3.5 rounded shadow-lg transition-all text-sm">
+                                    Register for the IVY Summit 2026 &rarr;
                                 </button>
                                 <button onclick="switchView('programme')" class="bg-white/10 hover:bg-white/20 text-white border border-white/20 font-display font-semibold px-7 py-3.5 rounded transition-all text-sm">
                                     View Programme
@@ -803,7 +730,6 @@
                         </div>
                     </div>
 
-                    <!-- Attribution -->
                     <div class="pt-6 border-t border-white/10 text-xs text-gray-400 italic">
                         Presented by the <strong class="text-gray-200 not-italic">BELNASA Youth Forum</strong> and <strong class="text-gray-200 not-italic">Imagine Scholar</strong>
                     </div>
@@ -811,9 +737,9 @@
 
                 <!-- Right Image Split -->
                 <div class="hidden lg:block lg:w-[28%] relative bg-slate-900 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1000&q=80" 
+                    <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1000&q=80"
                          onerror="this.src='https://placehold.co/800x1200/1e293b/29AB87?text=IVY+Summit'"
-                         alt="Young African entrepreneurs collaborating" 
+                         alt="Young African entrepreneurs collaborating"
                          class="w-full h-full object-cover object-center opacity-85">
                     <div class="absolute inset-0 bg-gradient-to-r from-[#182338] via-transparent to-transparent"></div>
                 </div>
@@ -832,7 +758,7 @@
                     </div>
                     <div class="py-5 px-4 text-center stat-border">
                         <h3 class="font-display text-2xl font-black text-brandGreen">2 Keynotes</h3>
-                        <p class="text-[11px] uppercase tracking-wider text-gray-300"> Plus Regional Founders Panel</p>
+                        <p class="text-[11px] uppercase tracking-wider text-gray-300">Plus Regional Founders Panel</p>
                     </div>
                     <div class="py-5 px-4 text-center">
                         <h3 class="font-display text-2xl font-black text-accent">Free Access</h3>
@@ -841,11 +767,10 @@
                 </div>
             </section>
 
-            <!-- ABOUT THE SUMMIT & WHO ARE WE (Slide 2 Exact Text) -->
+            <!-- ABOUT THE SUMMIT & WHO ARE WE -->
             <section class="py-16 bg-white border-b border-gray-200">
                 <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12">
-                    
-                    <!-- About The Summit -->
+
                     <div class="lg:col-span-6">
                         <span class="text-xs font-bold uppercase tracking-widest text-teal block mb-2">Concept Note</span>
                         <h2 class="font-display text-3xl font-extrabold text-navy mb-4">About the Summit</h2>
@@ -854,11 +779,10 @@
                         </p>
                     </div>
 
-                    <!-- Who Are We -->
                     <div class="lg:col-span-6 space-y-5">
                         <span class="text-xs font-bold uppercase tracking-widest text-electricBlue block mb-2">Organizers</span>
                         <h2 class="font-display text-3xl font-extrabold text-navy mb-4">Who Are We?</h2>
-                        
+
                         <div class="p-5 bg-surface rounded-lg border-l-4 border-belnasaBlue">
                             <h3 class="font-display font-bold text-navy text-lg mb-1">The BELNASA Youth Forum (BELNASA)</h3>
                             <p class="text-sm text-gray-600 leading-relaxed">
@@ -877,12 +801,11 @@
                 </div>
             </section>
 
-            <!-- OVERVIEW: OBJECTIVES, GOALS & TARGET AUDIENCE (Slide 3 Exact Text) -->
+            <!-- OVERVIEW: OBJECTIVES, GOALS & TARGET AUDIENCE -->
             <section class="py-16 bg-surface">
                 <div class="max-w-7xl mx-auto px-6">
                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-                        
-                        <!-- Primary Objectives -->
+
                         <div class="bg-white p-8 rounded-xl border border-gray-200 shadow-sm">
                             <h3 class="font-display text-xl font-extrabold text-teal uppercase tracking-wider mb-4">Primary Objective(s)</h3>
                             <ul class="space-y-3 text-sm text-gray-700">
@@ -894,7 +817,6 @@
                             </ul>
                         </div>
 
-                        <!-- Goals & Target Audiences -->
                         <div class="space-y-6">
                             <div class="bg-white p-8 rounded-xl border border-gray-200 shadow-sm">
                                 <h3 class="font-display text-xl font-extrabold text-navy uppercase tracking-wider mb-4">Goal(s)</h3>
@@ -905,7 +827,6 @@
                                 </ul>
                             </div>
 
-                            <!-- Target Audiences Routing -->
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                 <div class="bg-navy text-white p-6 rounded-xl border-t-4 border-teal flex flex-col justify-between">
                                     <div>
@@ -914,7 +835,7 @@
                                             Aspiring entrepreneurs, young innovators, creative and emerging for-profit and non-profit business owners from Botswana, Eswatini, Lesotho, Namibia, and South Africa.
                                         </p>
                                     </div>
-                                    <button onclick="selectTrackAndOnboard('creator')" class="text-xs font-bold text-teal hover:underline text-left">
+                                    <button onclick="openTeamsRegistration()" class="text-xs font-bold text-teal hover:underline text-left">
                                         Register as a Participant &rarr;
                                     </button>
                                 </div>
@@ -926,7 +847,7 @@
                                             Established entrepreneurs, investors, mentors, and industry professionals.
                                         </p>
                                     </div>
-                                    <button onclick="selectTrackAndOnboard('partner')" class="text-xs font-bold text-deepNavy hover:underline text-left">
+                                    <button onclick="openTeamsRegistration()" class="text-xs font-bold text-deepNavy hover:underline text-left">
                                         Register as an Ecosystem Partner &rarr;
                                     </button>
                                 </div>
@@ -951,15 +872,13 @@
                         </button>
                     </div>
 
-                    <!-- 4 Highlighted Portrait Cards (Keynotes & Seminar 1 Co-Hosts from PPTX Slides 6 & 7) -->
                     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                        
-                        <!-- Cindy Pearl Maphumulo -->
+
                         <div class="routing-card bg-surface rounded-xl overflow-hidden border border-gray-200 flex flex-col">
                             <div class="relative aspect-[4/5] bg-navy overflow-hidden">
-                                <img id="overview-img-cindy-pearl" 
-                                     src="CPMprofile.jpg.webp" 
-                                     alt="Cindy Pearl Maphumulo" 
+                                <img id="overview-img-cindy-pearl"
+                                     src="CPMprofile.jpg.webp"
+                                     alt="Cindy Pearl Maphumulo"
                                      class="w-full h-full object-cover object-top">
                                 <span class="absolute top-3 left-3 bg-teal text-white font-display font-bold text-[10px] uppercase tracking-wider px-2.5 py-1 rounded shadow">
                                     Keynote Speaker 1
@@ -976,12 +895,11 @@
                             </div>
                         </div>
 
-                        <!-- Khulekani Msweli -->
                         <div class="routing-card bg-surface rounded-xl overflow-hidden border border-gray-200 flex flex-col">
                             <div class="relative aspect-[4/5] bg-navy overflow-hidden">
-                                <img id="overview-img-khulekani" 
-                                     src="Khulekani%20Msweli%20Profile.png" 
-                                     alt="Khulekani Msweli" 
+                                <img id="overview-img-khulekani"
+                                     src="Khulekani%20Msweli%20Profile.png"
+                                     alt="Khulekani Msweli"
                                      class="w-full h-full object-cover object-top">
                                 <span class="absolute top-3 left-3 bg-brandGreen text-navy font-display font-bold text-[10px] uppercase tracking-wider px-2.5 py-1 rounded shadow">
                                     Keynote Speaker 2
@@ -998,12 +916,11 @@
                             </div>
                         </div>
 
-                        <!-- Cindy Sean -->
                         <div class="routing-card bg-surface rounded-xl overflow-hidden border border-gray-200 flex flex-col">
                             <div class="relative aspect-[4/5] bg-navy overflow-hidden">
-                                <img id="overview-img-cindy-sean" 
-                                     src="cindysean_profile.png" 
-                                     alt="Cindy Sean" 
+                                <img id="overview-img-cindy-sean"
+                                     src="cindysean_profile.png"
+                                     alt="Cindy Sean"
                                      class="w-full h-full object-cover object-top">
                                 <span class="absolute top-3 left-3 bg-electricBlue text-white font-display font-bold text-[10px] uppercase tracking-wider px-2.5 py-1 rounded shadow">
                                     Seminar 1 Co-Host
@@ -1020,12 +937,11 @@
                             </div>
                         </div>
 
-                        <!-- Kagiso Koyabe -->
                         <div class="routing-card bg-surface rounded-xl overflow-hidden border border-gray-200 flex flex-col">
                             <div class="relative aspect-[4/5] bg-navy overflow-hidden">
-                                <img id="overview-img-kagiso" 
-                                     src="kagisohost_profile.jpg" 
-                                     alt="Kagiso Koyabe" 
+                                <img id="overview-img-kagiso"
+                                     src="kagisohost_profile.jpg"
+                                     alt="Kagiso Koyabe"
                                      class="w-full h-full object-cover object-top">
                                 <span class="absolute top-3 left-3 bg-electricBlue text-white font-display font-bold text-[10px] uppercase tracking-wider px-2.5 py-1 rounded shadow">
                                     Seminar 1 Co-Host
@@ -1047,30 +963,26 @@
             </section>
         </main>
 
-        <!-- =====================================================================
-             VIEW 2: PROGRAMME & SEMINARS (HIGH-LEVEL CONTENT FROM SLIDES 4, 5 & 7)
-        ====================================================================== -->
+        <!-- VIEW 2: PROGRAMME & SEMINARS -->
         <main id="view-programme" class="view-section flex-grow pt-24 pb-20">
             <div class="max-w-6xl mx-auto px-6">
-                
+
                 <div class="mb-10">
                     <span class="text-xs font-bold uppercase tracking-widest text-teal block mb-2">Imagine Ventures (IVY) Summit</span>
                     <h1 class="font-opensauce text-3xl sm:text-4xl font-extrabold text-navy mb-2">Programme &amp; Seminar Sessions</h1>
                     <p class="text-gray-600 text-sm sm:text-base">
-                        High-level overview of the keynotes, interactive seminars, panel discussion, and networking sessions planned for 28 November 2026 (09h00–13h00).
+                        High-level overview of the keynotes, interactive seminars, panel discussion, and networking sessions planned for 28 November 2026 (09h00-13h00).
                     </p>
                 </div>
 
-                <!-- SEMINAR SESSIONS HIGHLIGHT (Slide 7) -->
                 <div class="mb-12">
                     <h2 class="font-display text-lg font-bold uppercase tracking-wider text-navy border-b-2 border-navy pb-2 mb-6">
                         Featured Seminar Sessions
                     </h2>
 
-                    <!-- Seminar 1 -->
                     <div class="bg-white rounded-xl border-2 border-teal p-6 sm:p-8 mb-6 shadow-sm">
                         <div class="flex flex-wrap justify-between items-center gap-2 mb-2">
-                            <span class="bg-teal text-white font-display font-bold text-xs uppercase px-3 py-1 rounded">Seminar 1 • 09h50–10h35</span>
+                            <span class="bg-teal text-white font-display font-bold text-xs uppercase px-3 py-1 rounded">Seminar 1 • 09h50-10h35</span>
                             <span class="text-xs font-semibold text-gray-500">Combined Session with All Participants • Includes Breakout Groups</span>
                         </div>
                         <h3 class="font-display text-2xl font-extrabold text-navy mt-2">
@@ -1081,20 +993,19 @@
                         </p>
                     </div>
 
-                    <!-- Concurrent Seminars 2 & 3 -->
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div class="bg-navy text-white rounded-xl p-6 sm:p-8 border-t-4 border-electricBlue">
-                            <span class="bg-electricBlue text-white font-display font-bold text-xs uppercase px-2.5 py-1 rounded">Seminar 2 (Concurrent) • 11h00–11h45</span>
+                            <span class="bg-electricBlue text-white font-display font-bold text-xs uppercase px-2.5 py-1 rounded">Seminar 2 (Concurrent) • 11h00-11h45</span>
                             <h3 class="font-display text-xl font-bold mt-3">Funding for Startups and Small Businesses</h3>
                             <p class="text-teal font-display font-semibold text-base mt-1 mb-4">“Ventures and Dragons: Starting for Growth”</p>
                             <div class="text-xs text-gray-300 space-y-1 pt-3 border-t border-white/10">
-                                <p><strong class="text-white">Lead:</strong> TBC </p>
+                                <p><strong class="text-white">Lead:</strong> TBC</p>
                                 <p><strong class="text-white">Supported by:</strong> Buyelani Msweli (BELNASA Youth Forum)</p>
                             </div>
                         </div>
 
                         <div class="bg-navy text-white rounded-xl p-6 sm:p-8 border-t-4 border-brandGreen">
-                            <span class="bg-brandGreen text-navy font-display font-bold text-xs uppercase px-2.5 py-1 rounded">Seminar 3 (Concurrent) • 11h00–11h45</span>
+                            <span class="bg-brandGreen text-navy font-display font-bold text-xs uppercase px-2.5 py-1 rounded">Seminar 3 (Concurrent) • 11h00-11h45</span>
                             <h3 class="font-display text-xl font-bold mt-3">Fundraising for Non-Profits</h3>
                             <p class="text-brandGreen font-display font-semibold text-base mt-1 mb-4">“Storycrafting: Fundraising for Impact”</p>
                             <div class="text-xs text-gray-300 space-y-1 pt-3 border-t border-white/10">
@@ -1105,34 +1016,33 @@
                     </div>
                 </div>
 
-                <!-- STREAMLINED CORE SCHEDULE (Slides 4 & 5 without minor admin lines) -->
                 <div>
                     <h2 class="font-display text-lg font-bold uppercase tracking-wider text-navy border-b-2 border-navy pb-2 mb-6">
                         Core Programme Flow
                     </h2>
                     <div class="bg-white rounded-xl border border-gray-200 divide-y divide-gray-100 shadow-sm text-sm">
                         <div class="p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-                            <div class="font-mono font-bold text-teal sm:w-36">09h25 – 09h45</div>
+                            <div class="font-mono font-bold text-teal sm:w-36">09h25 - 09h45</div>
                             <div class="flex-grow font-display font-bold text-navy">Keynote Speaker 1</div>
                             <div class="text-gray-600 sm:text-right">Cindy Pearl Maphumulo (African Leadership Academy)</div>
                         </div>
                         <div class="p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-2 bg-surface/60">
-                            <div class="font-mono font-bold text-teal sm:w-36">09h50 – 10h35</div>
+                            <div class="font-mono font-bold text-teal sm:w-36">09h50 - 10h35</div>
                             <div class="flex-grow font-display font-bold text-navy">Seminar 1: Business Strategy (“Ideating for Creation”)</div>
                             <div class="text-gray-600 sm:text-right">Cindy Sean &amp; Kagiso Koyabe</div>
                         </div>
                         <div class="p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-                            <div class="font-mono font-bold text-teal sm:w-36">10h35 – 10h55</div>
+                            <div class="font-mono font-bold text-teal sm:w-36">10h35 - 10h55</div>
                             <div class="flex-grow font-display font-bold text-navy">Keynote Speaker 2</div>
                             <div class="text-gray-600 sm:text-right">Khulekani Msweli (JEREMPAUL)</div>
                         </div>
                         <div class="p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-2 bg-surface/60">
-                            <div class="font-mono font-bold text-teal sm:w-36">11h00 – 11h45</div>
+                            <div class="font-mono font-bold text-teal sm:w-36">11h00 - 11h45</div>
                             <div class="flex-grow font-display font-bold text-navy">Concurrent Seminars 2 &amp; 3 (Startups Funding / NPO Fundraising)</div>
                             <div class="text-gray-600 sm:text-right">Seminar 2 Presenter TBC / Zodwa Madonsela &amp; Thenjiwe Nzimande</div>
                         </div>
                         <div class="p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-                            <div class="font-mono font-bold text-teal sm:w-36">11h45 – 12h20</div>
+                            <div class="font-mono font-bold text-teal sm:w-36">11h45 - 12h20</div>
                             <div class="flex-grow">
                                 <span class="font-display font-bold text-navy block">Regional Panel Discussion</span>
                                 <span class="text-xs text-gray-500">Panelists: Emmanuel Sibiya (Mthunzi Fridge Rentals, SA), Carol Sithole (Super Moms SA), plus Lesotho, Botswana &amp; Namibia/Eswatini panelists</span>
@@ -1140,7 +1050,7 @@
                             <div class="text-gray-600 sm:text-right shrink-0">Moderator: Junior Nkosi</div>
                         </div>
                         <div class="p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-2 bg-teal/5">
-                            <div class="font-mono font-bold text-teal sm:w-36">12h30 – 13h00</div>
+                            <div class="font-mono font-bold text-teal sm:w-36">12h30 - 13h00</div>
                             <div class="flex-grow font-display font-bold text-navy">Optional: Participants Networking (Networking &amp; Trivia Competition)</div>
                             <div class="text-gray-600 sm:text-right">Shadrack Zunguza, Tendumiso Mathebula &amp; Rodger Chinhangue</div>
                         </div>
@@ -1150,12 +1060,10 @@
             </div>
         </main>
 
-        <!-- =====================================================================
-             VIEW 3: SPEAKERS & FACILITATORS (HIGHLIGHTED PORTRAIT CARDS)
-        ====================================================================== -->
+        <!-- VIEW 3: SPEAKERS & FACILITATORS -->
         <main id="view-speakers" class="view-section flex-grow pt-24 pb-20">
             <div class="max-w-6xl mx-auto px-6">
-                
+
                 <div class="mb-10">
                     <span class="text-xs font-bold uppercase tracking-widest text-teal block mb-2">Imagine Ventures (IVY) Summit</span>
                     <h1 class="font-opensauce text-3xl sm:text-4xl font-extrabold text-navy mb-2">Keynote Speakers &amp; Facilitators</h1>
@@ -1164,18 +1072,16 @@
                     </p>
                 </div>
 
-                <!-- KEYNOTE SPEAKERS (Slide 6 Highlighted Split Cards with Photo Frames) -->
                 <h2 class="font-display text-lg font-bold uppercase tracking-wider text-navy border-b-2 border-navy pb-2 mb-6">
                     Keynote Speakers
                 </h2>
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-14">
-                    
-                    <!-- Cindy Pearl Maphumulo -->
+
                     <div class="routing-card bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden flex flex-col sm:flex-row">
                         <div class="sm:w-2/5 relative aspect-[4/5] sm:aspect-auto bg-navy shrink-0">
-                            <img id="speaker-img-cindy-pearl" 
-                                 src="CPMprofile.jpg.webp" 
-                                 alt="Cindy Pearl Maphumulo" 
+                            <img id="speaker-img-cindy-pearl"
+                                 src="CPMprofile.jpg.webp"
+                                 alt="Cindy Pearl Maphumulo"
                                  class="w-full h-full object-cover object-top">
                             <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-navy/90 to-transparent p-3 sm:hidden">
                                 <span class="text-[10px] font-bold uppercase tracking-widest text-teal">Keynote Speaker 1</span>
@@ -1186,7 +1092,7 @@
                                 <span class="bg-teal/15 text-teal font-display font-bold text-[10px] uppercase tracking-widest px-2.5 py-1 rounded">
                                     Keynote Speaker 1
                                 </span>
-                                <span class="text-xs font-mono font-semibold text-gray-400">09h25 – 09h45</span>
+                                <span class="text-xs font-mono font-semibold text-gray-400">09h25 - 09h45</span>
                             </div>
                             <h3 class="font-display text-2xl font-extrabold text-navy">Cindy Pearl Maphumulo</h3>
                             <p class="text-xs text-electricBlue font-semibold mt-1 mb-4">African Leadership Academy • Raymond Ackerman Academy Alum</p>
@@ -1196,12 +1102,11 @@
                         </div>
                     </div>
 
-                    <!-- Khulekani Msweli -->
                     <div class="routing-card bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden flex flex-col sm:flex-row">
                         <div class="sm:w-2/5 relative aspect-[4/5] sm:aspect-auto bg-deepNavy shrink-0">
-                            <img id="speaker-img-khulekani" 
-                                 src="Khulekani%20Msweli%20Profile.png" 
-                                 alt="Khulekani Msweli" 
+                            <img id="speaker-img-khulekani"
+                                 src="Khulekani%20Msweli%20Profile.png"
+                                 alt="Khulekani Msweli"
                                  class="w-full h-full object-cover object-top">
                             <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-navy/90 to-transparent p-3 sm:hidden">
                                 <span class="text-[10px] font-bold uppercase tracking-widest text-brandGreen">Keynote Speaker 2</span>
@@ -1212,7 +1117,7 @@
                                 <span class="bg-brandGreen/20 text-navy font-display font-bold text-[10px] uppercase tracking-widest px-2.5 py-1 rounded">
                                     Keynote Speaker 2
                                 </span>
-                                <span class="text-xs font-mono font-semibold text-gray-400">10h35 – 10h55</span>
+                                <span class="text-xs font-mono font-semibold text-gray-400">10h35 - 10h55</span>
                             </div>
                             <h3 class="font-display text-2xl font-extrabold text-navy">Khulekani Msweli</h3>
                             <p class="text-xs text-electricBlue font-semibold mt-1 mb-4">JEREMPAUL • Vuvulane, Eswatini</p>
@@ -1224,18 +1129,16 @@
 
                 </div>
 
-                <!-- SEMINAR 1 FACILITATORS (Highlighted Split Cards with Photo Frames & Uploaded Bio Sheet Copy) -->
                 <h2 class="font-display text-lg font-bold uppercase tracking-wider text-navy border-b-2 border-navy pb-2 mb-6">
                     Seminar 1 Co-Hosts &amp; Facilitators (“Ideating for Creation”)
                 </h2>
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-14">
-                    
-                    <!-- Cindy Sean -->
+
                     <div class="routing-card bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden flex flex-col sm:flex-row">
                         <div class="sm:w-2/5 relative aspect-[4/5] sm:aspect-auto bg-navy shrink-0">
-                            <img id="speaker-img-cindy-sean" 
-                                 src="cindysean_profile.png" 
-                                 alt="Cindy Sean" 
+                            <img id="speaker-img-cindy-sean"
+                                 src="cindysean_profile.png"
+                                 alt="Cindy Sean"
                                  class="w-full h-full object-cover object-top">
                         </div>
                         <div class="p-6 sm:p-7 flex flex-col justify-center">
@@ -1253,12 +1156,11 @@
                         </div>
                     </div>
 
-                    <!-- Kagiso Koyabe -->
                     <div class="routing-card bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden flex flex-col sm:flex-row">
                         <div class="sm:w-2/5 relative aspect-[4/5] sm:aspect-auto bg-navy shrink-0">
-                            <img id="speaker-img-kagiso" 
-                                 src="kagisohost_profile.jpg" 
-                                 alt="Kagiso Koyabe" 
+                            <img id="speaker-img-kagiso"
+                                 src="kagisohost_profile.jpg"
+                                 alt="Kagiso Koyabe"
                                  class="w-full h-full object-cover object-top">
                         </div>
                         <div class="p-6 sm:p-7 flex flex-col justify-center">
@@ -1278,24 +1180,20 @@
 
                 </div>
 
-                <!-- CONCURRENT SEMINAR LEADS & PANELISTS WITH PHOTO PLACEHOLDERS (Slides 4, 5 & 7) -->
                 <h2 class="font-display text-lg font-bold uppercase tracking-wider text-navy border-b-2 border-navy pb-2 mb-6">
                     Concurrent Seminar Leads &amp; Panelists
                 </h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    
-                    <!-- Ian McCloy -->
+
                     <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm flex items-center gap-4">
-                        <img id="speaker-img-ian" src="https://placehold.co/200x200/162238/3B82F6?text=Photo" alt="TBC-16 h-16 rounded-full object-cover shrink-0 border-2 border-electricBlue">
+                        <img id="speaker-img-seminar2" src="https://placehold.co/200x200/162238/3B82F6?text=TBC" alt="TBC" class="w-16 h-16 rounded-full object-cover shrink-0 border-2 border-electricBlue">
                         <div>
                             <span class="text-[10px] font-bold uppercase text-electricBlue block">Seminar 2: Startup Funding</span>
                             <h4 class="font-display font-bold text-navy text-base">TBC</h4>
-                            <p class="text-xs text-gray-500"> </p>
                             <p class="text-[11px] text-gray-600 mt-1">Supported by <strong>Buyelani Msweli</strong> (BELNASA Youth Forum Chair)</p>
                         </div>
                     </div>
 
-                    <!-- Zodwa Madonsela -->
                     <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm flex items-center gap-4">
                         <img id="speaker-img-zodwa" src="https://placehold.co/200x200/162238/78BE20?text=Photo" alt="Zodwa Madonsela" class="w-16 h-16 rounded-full object-cover shrink-0 border-2 border-brandGreen">
                         <div>
@@ -1306,7 +1204,6 @@
                         </div>
                     </div>
 
-                    <!-- Regional Panelists -->
                     <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm flex items-center gap-4">
                         <img id="speaker-img-panel" src="https://placehold.co/200x200/162238/29AB87?text=Panel" alt="Regional Panel" class="w-16 h-16 rounded-full object-cover shrink-0 border-2 border-teal">
                         <div>
@@ -1323,122 +1220,6 @@
             </div>
         </main>
 
-        <!-- =====================================================================
-             VIEW 4: REGISTRATION & ONBOARDING PORTAL (EXACT IVY SUMMIT INTEREST FORM)
-        ====================================================================== -->
-        <main id="view-onboarding" class="view-section flex-grow pt-24 pb-20">
-            <div class="max-w-3xl mx-auto px-6">
-                
-                <div class="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden">
-                    <div class="bg-navy p-8 text-white border-b-4 border-teal">
-                        <span class="bg-teal/20 text-teal text-xs font-bold uppercase tracking-widest px-3 py-1 rounded inline-block mb-2">IVY Summit 2026 Onboarding</span>
-                        <h1 class="font-opensauce text-2xl sm:text-3xl font-extrabold">Register for the Imagine Ventures Youth Summit 2026</h1>
-                        <p class="text-gray-300 text-sm mt-1">28 November 2026 • 9:00 AM – 1:30 PM (Virtual)</p>
-                    </div>
-
-                    <form id="onboarding-form" onsubmit="handleOnboardingSubmit(event)" class="p-8 space-y-6">
-                        
-                        <!-- Audience Selection -->
-                        <div>
-                            <label class="block font-display font-bold text-navy text-xs uppercase tracking-wider mb-2">
-1. Select Your Profile
-                            </label>
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                <label class="cursor-pointer">
-                                    <input type="radio" name="cohort" value="Primary: Aspiring / Emerging Entrepreneur" id="radio-creator" class="peer sr-only" checked>
-                                    <div class="p-3.5 rounded-lg border-2 border-gray-200 peer-checked:border-teal peer-checked:bg-teal/5 transition-all">
-                                        <div class="font-display font-bold text-navy text-sm">Aspiring / Emerging Entrepreneur</div>
-                                        <p class="text-xs text-gray-500">Innovator, for-profit or non-profit founder (BLNS)</p>
-                                    </div>
-                                </label>
-                                <label class="cursor-pointer">
-                                    <input type="radio" name="cohort" value="Secondary: Investor / Mentor / Professional" id="radio-partner" class="peer sr-only">
-                                    <div class="p-3.5 rounded-lg border-2 border-gray-200 peer-checked:border-deepNavy peer-checked:bg-deepNavy/5 transition-all">
-                                        <div class="font-display font-bold text-navy text-sm">Established Entrepreneur / Mentor / Investor</div>
-                                        <p class="text-xs text-gray-500">Industry professional or ecosystem partner</p>
-                                    </div>
-                                </label>
-                            </div>
-                        </div>
-
-                        <!-- Basic Details -->
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            <div>
-                                <label for="fullName" class="block text-xs font-bold uppercase text-gray-700 mb-1">Full Name *</label>
-                                <input type="text" id="fullName" required placeholder="Your full name" class="w-full px-3.5 py-2.5 rounded border border-gray-300 focus:border-teal focus:outline-none text-sm">
-                            </div>
-                            <div>
-                                <label for="email" class="block text-xs font-bold uppercase text-gray-700 mb-1">Email Address *</label>
-                                <input type="email" id="email" required placeholder="you@example.com" class="w-full px-3.5 py-2.5 rounded border border-gray-300 focus:border-teal focus:outline-none text-sm">
-                            </div>
-                            <div>
-                                <label for="country" class="block text-xs font-bold uppercase text-gray-700 mb-1">Country *</label>
-                                <select id="country" required class="w-full px-3.5 py-2.5 rounded border border-gray-300 focus:border-teal focus:outline-none text-sm bg-white">
-                                    <option value="">Select country...</option>
-                                    <option value="Botswana">Botswana</option>
-                                    <option value="Eswatini">Eswatini</option>
-                                    <option value="Lesotho">Lesotho</option>
-                                    <option value="Namibia">Namibia</option>
-                                    <option value="South Africa">South Africa</option>
-                                    <option value="Other">Other</option>
-                                </select>
-                            </div>
-                            <div>
-                                <label for="ventureName" class="block text-xs font-bold uppercase text-gray-700 mb-1">Venture or Organization Name</label>
-                                <input type="text" id="ventureName" placeholder="Optional" class="w-full px-3.5 py-2.5 rounded border border-gray-300 focus:border-teal focus:outline-none text-sm">
-                            </div>
-                        </div>
-
-                        <!-- Concurrent Seminar Choice -->
-                        <div>
-                            <label class="block font-display font-bold text-navy text-xs uppercase tracking-wider mb-2">
-2. Select Your Concurrent Session (11h00–11h45)
-                            </label>
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                <label class="cursor-pointer">
-                                    <input type="radio" name="seminarTrack" value="Seminar 2: Funding for Startups (TBCpeer sr-only" checked>
-                                    <div class="p-3.5 rounded-lg border border-gray-300 peer-checked:border-electricBlue peer-checked:bg-blue-50/50 transition-all">
-                                        <div class="font-display font-bold text-navy text-sm">Seminar 2: Funding for Startups</div>
-                                        <p class="text-xs text-gray-500">“Ventures and Dragons: Starting for Growth”</p>
-                                    </div>
-                                </label>
-                                <label class="cursor-pointer">
-                                    <input type="radio" name="seminarTrack" value="Seminar 3: Fundraising for Non-Profits (Zodwa Madonsela)" class="peer sr-only">
-                                    <div class="p-3.5 rounded-lg border border-gray-300 peer-checked:border-brandGreen peer-checked:bg-green-50/50 transition-all">
-                                        <div class="font-display font-bold text-navy text-sm">Seminar 3: Fundraising for Non-Profits</div>
-                                        <p class="text-xs text-gray-500">“Storycrafting: Fundraising for Impact”</p>
-                                    </div>
-                                </label>
-                            </div>
-                        </div>
-
-                        <button type="submit" class="w-full bg-teal hover:bg-[#208b6d] text-white font-display font-bold py-3.5 px-6 rounded-lg shadow transition-all text-sm">
-                            Confirm IVY Summit 2026 Registration &rarr;
-                        </button>
-                    </form>
-
-                    <!-- Confirmation State -->
-                    <div id="onboarding-success" class="hidden p-8 bg-surface">
-                        <div class="bg-white border-2 border-teal rounded-xl p-6 shadow-sm">
-                            <span class="text-xs font-bold uppercase tracking-widest text-teal block">Registration Confirmed</span>
-                            <h3 class="font-display text-2xl font-extrabold text-navy mt-1 mb-4" id="pass-name">Participant</h3>
-                            <div class="text-xs text-gray-600 space-y-1 mb-6">
-                                <p><strong>Event:</strong> Imagine Ventures (IVY) Summit (28 Nov 2026, 9AM–1:30PM)</p>
-                                <p><strong>Profile:</strong> <span id="pass-cohort"></span></p>
-                                <p><strong>11h00 Track:</strong> <span id="pass-track"></span></p>
-                                <p><strong>Confirmation Email:</strong> <span id="pass-email"></span></p>
-                            </div>
-                            <button onclick="resetOnboardingForm()" class="text-xs font-semibold text-teal hover:underline">
-                                Register another participant
-                            </button>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-        </main>
-
         <!-- IVY SUMMIT FOOTER -->
         <footer class="bg-navy text-white border-t-4 border-teal mt-auto">
             <div class="max-w-7xl mx-auto px-6 py-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-gray-400">
@@ -1446,7 +1227,7 @@
                     <strong class="text-white font-opensauce">Imagine Ventures Youth Summit (IVY Summit)</strong> • Presented by the BELNASA Youth Forum &amp; Imagine Scholar.
                 </div>
                 <div class="flex items-center gap-4">
-                    <span>28 Nov 2026 • 9AM–1:30PM</span>
+                    <span>28 Nov 2026 • 9AM-1:30PM</span>
                     <button onclick="closeIvyPortal()" class="text-teal hover:underline font-semibold">Return to BELNASA Main Site</button>
                 </div>
             </div>
@@ -1454,10 +1235,24 @@
     </div>
 
     <!-- =====================================================================
-         JAVASCRIPT CONTROLLERS (PORTAL SWITCHING, FORMS & URL HASH ROUTING)
+         JAVASCRIPT CONTROLLERS
     ====================================================================== -->
     <script>
-        // 1. Mobile Menu Toggle (Main BELNASA Portal)
+        // =====================================================================
+        // PASTE YOUR PUBLISHED MICROSOFT TEAMS EVENT LINK BELOW
+        // Once you click "Publish event" in Teams, copy the public attendee
+        // registration URL and paste it between the quotes below.
+        // =====================================================================
+        const MICROSOFT_TEAMS_RSVP_URL = "https://events.teams.microsoft.com/event/13eebeeb-1923-4a44-9343-77bf5c5fa1a6@0aba7186-32b4-4c09-83b8-7ba4d4b3a9a0?source=copyLinkOneEventsShareDialog";
+
+        function openTeamsRegistration() {
+            if (!MICROSOFT_TEAMS_RSVP_URL.startsWith('http')) {
+                alert('The Microsoft Teams registration link is being finalized. Once published, paste the URL into MICROSOFT_TEAMS_RSVP_URL in index.html.');
+                return;
+            }
+            window.open(MICROSOFT_TEAMS_RSVP_URL, '_blank', 'noopener,noreferrer');
+        }
+
         document.addEventListener('DOMContentLoaded', () => {
             const btn = document.getElementById('mobile-menu-btn');
             const menu = document.getElementById('mobile-menu');
@@ -1473,7 +1268,6 @@
                 });
             }
 
-            // Check if URL has #ivy-summit or #ivy-register so bulk email links open the Summit directly!
             checkUrlHashRouting();
             window.addEventListener('hashchange', checkUrlHashRouting);
         });
@@ -1483,11 +1277,14 @@
             if (hash === '#ivy-summit') {
                 openIvyPortal('overview');
             } else if (hash === '#ivy-register') {
-                openIvyPortal('onboarding');
+                if (MICROSOFT_TEAMS_RSVP_URL.startsWith('http')) {
+                    window.location.href = MICROSOFT_TEAMS_RSVP_URL;
+                } else {
+                    openIvyPortal('overview');
+                }
             }
         }
 
-        // 2. Top-Level Portal Switcher (BELNASA Main Website <-> IVY Summit Portal)
         function openIvyPortal(initialTab = 'overview') {
             document.getElementById('belnasa-main-portal').classList.remove('active');
             document.getElementById('ivy-summit-portal').classList.add('active');
@@ -1503,7 +1300,6 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        // 3. Exact IVY Summit Sub-View Switcher (Overview / Programme / Speakers / Onboarding)
         function switchView(viewName) {
             document.querySelectorAll('.view-section').forEach(section => {
                 section.classList.remove('active');
@@ -1519,7 +1315,7 @@
                 }
             });
 
-            ['overview', 'programme', 'speakers', 'onboarding'].forEach(id => {
+            ['overview', 'programme', 'speakers'].forEach(id => {
                 const mobBtn = document.getElementById('mob-' + id);
                 if (mobBtn) {
                     if (id === viewName) {
@@ -1533,39 +1329,6 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        function selectTrackAndOnboard(type) {
-            switchView('onboarding');
-            if (type === 'creator') {
-                document.getElementById('radio-creator').checked = true;
-            } else {
-                document.getElementById('radio-partner').checked = true;
-            }
-        }
-
-        function handleOnboardingSubmit(e) {
-            e.preventDefault();
-            const name = document.getElementById('fullName').value;
-            const email = document.getElementById('email').value;
-            const country = document.getElementById('country').value;
-            const cohort = document.querySelector('input[name="cohort"]:checked').value;
-            const track = document.querySelector('input[name="seminarTrack"]:checked').value;
-
-            document.getElementById('pass-name').textContent = name;
-            document.getElementById('pass-email').textContent = email;
-            document.getElementById('pass-cohort').textContent = country + ' • ' + cohort.split(':')[0];
-            document.getElementById('pass-track').textContent = track;
-
-            document.getElementById('onboarding-form').classList.add('hidden');
-            document.getElementById('onboarding-success').classList.remove('hidden');
-        }
-
-        function resetOnboardingForm() {
-            document.getElementById('onboarding-form').reset();
-            document.getElementById('onboarding-form').classList.remove('hidden');
-            document.getElementById('onboarding-success').classList.add('hidden');
-        }
-
-        // 4. BELNASA Member Registration & Instant Member ID Generator
         function handleMemberRegistration(e) {
             e.preventDefault();
             const name = document.getElementById('mem-name').value.trim();
@@ -1575,7 +1338,6 @@
             const age = document.getElementById('mem-age').value;
             const interest = document.getElementById('mem-interest').value;
 
-            // Generate deterministic-looking unique BELNASA Member ID
             const randomDigits = Math.floor(1000 + Math.random() * 9000);
             const memberId = `BYF-${countryCode}-26-${randomDigits}`;
 
